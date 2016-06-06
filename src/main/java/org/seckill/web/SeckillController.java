@@ -52,6 +52,12 @@ public class SeckillController {
         return "detail";
     }
 
+    /**
+     * 秒杀暴露接口  进行优化 使用redis来进行缓存需要秒杀的产品
+     * @param seckillId
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/{seckillId}/exposer",
             method = RequestMethod.POST,
             produces = {"application/json;charset=utf-8"})
